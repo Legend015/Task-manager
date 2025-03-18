@@ -1,3 +1,4 @@
+/* Sidebar Container */
 .sidebar {
   width: 280px;
   flex-shrink: 0;
@@ -6,40 +7,94 @@
 .sidebar .MuiDrawer-paper {
   width: 280px;
   box-sizing: border-box;
-  padding: 7px;
+  padding: 8px;
+  background-color: #f7f9fc;
 }
 
-.sidebar-heading {
-  padding-left: 16px;
-  margin-top: 8px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #555555ad;
-}
-
-.sidebar-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.sidebar-list {
-  padding: 0;
-}
-
-.sidebar-list-item {
-  padding-left: 16px;
-}
-
-.sidebar-link:hover {
-  background-color: rgb(172, 203, 233);
-}
+/* Sidebar Header */
 .sidebar-header {
   display: flex;
   align-items: center;
-  gap: 10px; /* Adjust space between image and text */
+  gap: 12px;
   padding: 16px;
 }
+
+.sidebar-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
 .sidebar-title {
+  font-weight: bold !important;
+  font-size: 1.5rem !important;
+  color: #333;
+}
+
+/* Sidebar Content */
+.sidebar-content {
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+  padding-right: 8px;
+}
+
+/* Sidebar Heading */
+.sidebar-heading {
+  padding-left: 16px;
+  margin-top: 12px;
+  font-size: 1rem;
   font-weight: bold;
-  font-size: 1.6rem;
+  color: #555555;
+}
+
+/* Sidebar List */
+.sidebar-list {
+  padding: 0;
+  list-style: none;
+}
+
+/* Sidebar Links */
+.sidebar-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Active Sidebar Link */
+.sidebar-link.active {
+  background-color: rgba(0, 123, 255, 0.2);
+  font-weight: bold;
+}
+
+/* Sidebar Icons */
+.sidebar-link .MuiListItemIcon-root {
+  color: #79b3f0;
+  min-width: 40px;
+}
+
+/* Scrollbar Customization */
+.sidebar-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background: #79b3f0;
+  border-radius: 10px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+  background: #1f82ec;
 }
